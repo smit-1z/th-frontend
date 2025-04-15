@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrackHire - Job Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>TrackHire</h1>
+    <p>Your personal job application tracker</p>
+  </header>
+
+  <section class="form-section">
+    <h2>Add New Application</h2>
+    <form id="jobForm">
+      <input type="text" id="role" placeholder="Job Title" required />
+      <input type="text" id="company" placeholder="Company Name" required />
+      <select id="status" required>
+        <option value="">Select Status</option>
+        <option value="Applied">Applied</option>
+        <option value="Interviewing">Interviewing</option>
+        <option value="Offer">Offer</option>
+        <option value="Rejected">Rejected</option>
+      </select>
+      <input type="date" id="appliedDate" required />
+      <textarea id="notes" placeholder="Notes (optional)"></textarea>
+      <button type="submit">Add Job</button>
+    </form>
+  </section>
+
+  <section class="table-section">
+    <h2>Application List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Role</th>
+          <th>Company</th>
+          <th>Status</th>
+          <th>Applied Date</th>
+          <th>Notes</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="jobTableBody">
+        <!-- Populated via JS -->
+      </tbody>
+    </table>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
